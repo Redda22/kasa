@@ -1,17 +1,32 @@
 import React from 'react';
+import { BrowserRouter, NavLink, Link, Routes, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import './index.scss';
+import PP from './PagePrincipale/PP';
+import AP from './APropos/AP';
 import reportWebVitals from './reportWebVitals';
+import logo from './Assets/img/LOGO.svg';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <BrowserRouter>
+    <header className="PP-header">
+      <img src={logo} alt="logo" />
+      <nav>
+        <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : "link"} >Accueil</NavLink>
+        <NavLink to="/about" className={({ isActive }) => isActive ? "active-link" : "link"} >À Propos</NavLink>
+      </nav>
+    </header>
+    <Routes>
+      <Route path="/" element={<PP />} />
+      <Route path="/about" element={<AP />} />
+    </Routes>
+    <footer>
+      <img src={logo} alt="logo" />
+      <p>© 2020 Kasa. All rights reserved</p>
+    </footer>
+  </BrowserRouter>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
 reportWebVitals();
