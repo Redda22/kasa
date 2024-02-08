@@ -15,7 +15,7 @@ function PP() {
       <div className='cards'>
         {cards_data.map((dataGroup, index) => (
 
-          <Link
+          <Link 
             to={{
               pathname: `card/${dataGroup.id}`
             }}

@@ -11,7 +11,7 @@ function PC() {
   const [imageStates, setImageStates] = useState(Array(images.length).fill(false));
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const pRef1 = useRef(null);
+  const pRef1 = useRef(null); 
   const pRef2 = useRef(null);
   const [IActif1, setIActif1] = useState(0);
   const [IActif2, setIActif2] = useState(0);

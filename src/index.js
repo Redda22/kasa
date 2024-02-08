@@ -6,16 +6,16 @@ import PPage from './PagePrincipale/PP';
 import APropos from './APropos/AP';
 import PCartes from './PageCartes/PC';
 import PErreur from './404/404'; 
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './reportWebVitals'; 
 import logo from './Assets/img/LOGO.svg';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <header className="PPage-header">
+    <header className="PP-header">
       <img src={logo} alt="logo" />
       <nav>
-        <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : "link"} >Accueil</NavLink>
+        <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : "link"} >Accuei</NavLink>
         <NavLink to="/about" className={({ isActive }) => isActive ? "active-link" : "link"} >À Propos</NavLink>
       </nav>
     </header>

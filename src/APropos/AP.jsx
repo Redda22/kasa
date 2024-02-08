@@ -8,7 +8,7 @@ function AP() {
   const pRef3 = useRef(null);
   const pRef4 = useRef(null);
 
-  const [IActif1, setIActif1] = useState(0);
+  const [IActif1, setIActif1] = useState(0); 
   const [IActif2, setIActif2] = useState(0);
   const [IActif3, setIActif3] = useState(0);
   const [IActif4, setIActif4] = useState(0);
