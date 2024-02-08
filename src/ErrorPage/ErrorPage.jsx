@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './404.scss';
+import './ErrorPage.scss';
 
-function OPS() {
+function ErrorPage() {
   return (
-    <div className="OPS">
+    <div className="ErrorPage">
       <h1>404</h1>
       <p>Oups! La page que vous demandez n'existe pas.</p>
       <Link to={{pathname: '/'}}> Retourner sur la page d'accueil </Link>
@@ -12,4 +12,4 @@ function OPS() {
   );
 }
 
-export default OPS;
+export default ErrorPage;

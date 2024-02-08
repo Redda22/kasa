@@ -1,4 +1,4 @@
-.PC {
+.CardsPage {
   margin: 0;
   padding: 0;
   min-height: 67vh;
@@ -245,7 +245,7 @@
 
 /****** TABLET ******/
 @media (min-width: 768px) and (max-width: 1024px) {
-  .PC {
+  .CardsPage {
     width: 100vw;
 
     .img-div {
@@ -359,7 +359,7 @@
 
 /****** MOBILE ******/
 @media (max-width: 768px) {
-  .PC {
+  .CardsPage {
     width: 100vw;
 
     .img-div {

@@ -1,9 +1,9 @@
 import { React, useState, useEffect, useRef } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
-import './PC.scss';
+import './CardsPage.scss';
 import cards_data from '../Assets/cards.json';
 
-function PC() {
+function CardsPage() {
   const { id } = useParams();
   const dataGroup = cards_data.find(card => card.id === id);
 
@@ -63,7 +63,7 @@ function PC() {
   }
   else {
     return (
-      <div className="PC">
+      <div className="CardsPage">
 
         <div className='img-div'>
           {images.map((imageUrl, index) => (
@@ -168,4 +168,4 @@ function PC() {
 
 }
 
-export default PC;
+export default CardsPage;

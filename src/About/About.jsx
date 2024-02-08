@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
-import './AP.scss';
+import './About.scss';
 import bannerImg from "../Assets/img/Image1.png";
 
-function AP() {
+function About() {
   const pRef1 = useRef(null);
   const pRef2 = useRef(null);
   const pRef3 = useRef(null);
@@ -45,7 +45,7 @@ function AP() {
   }
 
   return (
-    <div className="AP">
+    <div className="About">
       <div className='banner'>
         <img src={bannerImg} alt="banner" />
       </div>
@@ -131,4 +131,4 @@ function AP() {
   );
 }
 
-export default AP;
+export default About;

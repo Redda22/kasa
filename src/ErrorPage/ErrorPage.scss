@@ -1,4 +1,4 @@
-.OPS {
+.ErrorPage {
   margin: 0;
   min-height: 67vh;
   width: 100vw;
@@ -26,9 +26,16 @@
   }
 }
 
+/****** TABLET ******/
+@media (min-width: 768px) and (max-width: 1024px){
+  .ErrorPage{
+    min-height: 72vh;
+  }
+}
+
 /****** MOBILE ******/
 @media (max-width: 768px){
-  .OPS{
+  .ErrorPage{
     h1{
       font-size: 30vw;
     }
@@ -43,9 +50,3 @@
   }
 }
 
-/****** TABLET ******/
-@media (min-width: 768px) and (max-width: 1024px){
-  .OPS{
-    min-height: 72vh;
-  }
-}

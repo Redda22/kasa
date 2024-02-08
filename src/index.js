@@ -2,17 +2,17 @@ import React from 'react';
 import { BrowserRouter, NavLink, Routes, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
-import PPage from './PagePrincipale/PP';
-import APropos from './APropos/AP';
-import PCartes from './PageCartes/PC';
-import PErreur from './404/404'; 
+import PrincipalPage from './PrincipalPage/PrincipalPage';
+import About from './About/About';
+import CardsPage from './CardsPage/CardsPage';
+import ErrorPage from './ErrorPage/ErrorPage'; 
 import reportWebVitals from './reportWebVitals'; 
 import logo from './Assets/img/LOGO.svg';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <header className="PP-header">
+    <header>
       <img src={logo} alt="logo" />
       <nav>
         <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : "link"} >Accueil</NavLink>
@@ -20,11 +20,11 @@ root.render(
       </nav>
     </header>
     <Routes>
-      <Route path="/" element={<PPage />} />
-      <Route path="/about" element={<APropos />} />
-      <Route path="card/:id" element={<PCartes />} />
-      <Route path="404" element={<PErreur />} />
-      <Route path="*" element={<PErreur />} />
+      <Route path="/" element={<PrincipalPage />} />
+      <Route path="/about" element={<About />} />
+      <Route path="card/:id" element={<CardsPage />} />
+      <Route path="404" element={<ErrorPage />} />
+      <Route path="*" element={<ErrorPage />} />
     </Routes>
     <footer>
       <img src={logo} alt="logo" />

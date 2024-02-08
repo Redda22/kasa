@@ -1,5 +1,5 @@
 /****** GENERAL ******/
-.PP {
+.PrincipalPage {
   min-height: 67vh;
   width: 100vw;
   display: flex;
@@ -84,7 +84,7 @@
 
 /****** MOBILE ******/
 @media (max-width: 768px){
-  .PP{
+  .PrincipalPage{
     .title{
       width: 90%;
       height: 12vh;
@@ -126,7 +126,7 @@
 
 /****** TABLET ******/
 @media (min-width: 768px) and (max-width: 1024px){
-  .PP{
+  .PrincipalPage{
     .title{
       width: 86%;
       height: 15vh;
