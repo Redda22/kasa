@@ -1,16 +1,18 @@
 import React from 'react';
-import { BrowserRouter, NavLink, Link, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, NavLink, Routes, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
-import PP from './PagePrincipale/PP';
-import AP from './APropos/AP';
+import PPage from './PagePrincipale/PP';
+import APropos from './APropos/AP';
+import PCartes from './PageCartes/PC';
+import PErreur from './404/404'; 
 import reportWebVitals from './reportWebVitals';
 import logo from './Assets/img/LOGO.svg';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <header className="PP-header">
+    <header className="PPage-header">
       <img src={logo} alt="logo" />
       <nav>
         <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : "link"} >Accueil</NavLink>
@@ -18,8 +20,11 @@ root.render(
       </nav>
     </header>
     <Routes>
-      <Route path="/" element={<PP />} />
-      <Route path="/about" element={<AP />} />
+      <Route path="/" element={<PPage />} />
+      <Route path="/about" element={<APropos />} />
+      <Route path="card/:id" element={<PCartes />} />
+      <Route path="404" element={<PErreur />} />
+      <Route path="*" element={<PErreur />} />
     </Routes>
     <footer>
       <img src={logo} alt="logo" />
@@ -27,6 +32,5 @@ root.render(
     </footer>
   </BrowserRouter>
 );
-
 
 reportWebVitals();
