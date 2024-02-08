@@ -15,7 +15,7 @@ root.render(
     <header className="PP-header">
       <img src={logo} alt="logo" />
       <nav>
-        <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : "link"} >Accuei</NavLink>
+        <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : "link"} >Accueil</NavLink>
         <NavLink to="/about" className={({ isActive }) => isActive ? "active-link" : "link"} >À Propos</NavLink>
       </nav>
     </header>
