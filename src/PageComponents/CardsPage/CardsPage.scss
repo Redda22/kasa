@@ -187,57 +187,8 @@
       align-items: flex-start;
       justify-content: space-between;
 
-      div {
-        transition-duration: $duration-time;
+      .serie{
         width: 45%;
-        height: auto;
-        overflow: hidden;
-
-        h3 {
-          background-color: #FF6060;
-          border-radius: 5px;
-          position: relative;
-          color: white;
-          padding-left: 1%;
-          font-size: 1.2vw;
-          display: flex;
-          align-items: center;
-          height: 5vh;
-          margin: 0;
-          z-index: 2;
-
-          i {
-            position: absolute;
-            right: 1%;
-            font-size: 1.2vw;
-            cursor: pointer;
-            transition-duration: $duration-time/2;
-          }
-        }
-
-        p {
-          transition-duration: $duration-time/2;
-          transform: translateY(-10vh);
-          width: 90%;
-          opacity: 0;
-          z-index: 1;
-          font-size: 0.9vw;
-          margin: 0;
-          padding-top: 0.8vh;
-          padding-left: 3%;
-        }
-
-        &.active {
-          i {
-            rotate: -180deg;
-          }
-
-          p {
-            transition-duration: $duration-time;
-            transform: translateY(0);
-            opacity: 1;
-          }
-        }
       }
     }
   }

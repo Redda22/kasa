@@ -7,7 +7,7 @@
   flex-direction: column;
   margin: 0;
 
-  .title {
+  .banner {
     position: relative;
     height: 25vh;
     width: 70%;
@@ -52,7 +52,6 @@
         width: 19vw;
         aspect-ratio: 1/1;
         border-radius: 10px;
-        //background-image: linear-gradient(to bottom, #FF6060, #cf5353);
         overflow: hidden;
         display: flex;
         align-items: center;
@@ -82,52 +81,10 @@
   }
 }
 
-/****** MOBILE ******/
-@media (max-width: 768px){
-  .PrincipalPage{
-    .title{
-      width: 90%;
-      height: 12vh;
-      border-radius: 10px;
-      justify-content: flex-start;
-
-      h1{
-        font-size: 6vw;
-        width: 58%;
-        margin-left: 4%;
-        line-height: 2.5vh;
-      }
-    }
-    .cards{
-      background-color: transparent;
-      width: 90%;
-      padding: 0;
-      margin-top: 5%;
-      justify-content: center;
-
-      a{
-        margin: 0;
-        width: 100%;
-        aspect-ratio: 1/0.8;
-        margin-bottom: 5%;
-
-        .card{
-          height: 100%;
-          width: 100%;
-
-          h2{
-            font-size: 5vw;
-          }
-        }
-      }
-    }
-  }
-}
-
 /****** TABLET ******/
 @media (min-width: 768px) and (max-width: 1024px){
   .PrincipalPage{
-    .title{
+    .banner{
       width: 86%;
       height: 15vh;
       border-radius: 15px;
@@ -161,6 +118,47 @@
 
           h2{
             font-size: 2.5vw;
+          }
+        }
+      }
+    }
+  }
+}
+/****** MOBILE ******/
+@media (max-width: 768px){
+  .PrincipalPage{
+    .banner{
+      width: 90%;
+      height: 12vh;
+      border-radius: 10px;
+      justify-content: flex-start;
+
+      h1{
+        font-size: 6vw;
+        width: 58%;
+        margin-left: 4%;
+        line-height: 2.5vh;
+      }
+    }
+    .cards{
+      background-color: transparent;
+      width: 90%;
+      padding: 0;
+      margin-top: 5%;
+      justify-content: center;
+
+      a{
+        margin: 0;
+        width: 100%;
+        aspect-ratio: 1/0.8;
+        margin-bottom: 5%;
+
+        .card{
+          height: 100%;
+          width: 100%;
+
+          h2{
+            font-size: 5vw;
           }
         }
       }
