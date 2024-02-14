@@ -1,7 +1,7 @@
 $duration-time: 1s;
 
 .serie {
-    //width: 60vw;
+    width: 100%;
     height: 5.5vh;
     margin-top: 2%;
     transition-duration: $duration-time;
@@ -88,6 +88,10 @@ $duration-time: 1s;
         p {
             width: 95%;
             font-size: 3vw;
+
+            span{
+                font-size: 3vw;
+            }
         }
 
         &.active {
@@ -109,7 +113,7 @@ $duration-time: 1s;
 /****** MOBILE ******/
 @media (max-width: 768px) {
     .serie {
-        //width: 90%;
+        width: 90%;
         margin-top: 8%;
 
         h3 {
@@ -125,6 +129,10 @@ $duration-time: 1s;
         p {
             width: 95%;
             font-size: 3.5vw;
+
+            span{
+                font-size: 3.5vw;
+            }
         }
 
         &.active {

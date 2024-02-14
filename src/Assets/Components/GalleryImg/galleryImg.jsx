@@ -7,7 +7,6 @@ function GalleryImg(props) {
     const images = cards_data.find(dataGroup => dataGroup.id === id).pictures; // récupération des images au groupe de données correspondant à l'id.
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    console.log(currentImageIndex);
 
     function nextImage() {
         setCurrentImageIndex((currentImageIndex + 1) % images.length);
