@@ -21,7 +21,6 @@ root.render(
     <header>
       <img src={logo} alt="logo" />
       <nav>
-
         <NavLink to="/"
           // Conditionnement de la classe du lien selon la raçine de l'url.
           className={({ isActive }) => isActive ? "active-link" : ""} >

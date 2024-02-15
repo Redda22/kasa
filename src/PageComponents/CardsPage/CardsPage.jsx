@@ -1,11 +1,11 @@
 import { React } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 
-import GalleryImg from '../../Assets/Components/GalleryImg/galleryImg';
-import Collapse from '../../Assets/Components/Collapse/collapse';
+import GalleryImg from '../OthersComponents/GalleryImg/galleryImg';
+import Collapse from '../OthersComponents/Collapse/collapse';
 
 import './CardsPage.scss';
-import cards_data from '../../Assets/cards.json';
+import cards_data from '../cards.json';
 
 function CardsPage() {
   const id = useParams().id; // Accès à l'url et saisi de l'id.
@@ -17,13 +17,12 @@ function CardsPage() {
   else {
     return (
       <div className="CardsPage">
-
+        
         <GalleryImg
           id={id}
         />
 
         <div className='info'>
-
           <div className='sec12'>
             <div className='info-section info-section1'>
 
@@ -31,13 +30,11 @@ function CardsPage() {
                 <h2>{dataGroup.title}</h2>
                 <p>{dataGroup.location}</p>
               </div>
-
               <div className='tags'>
                 {dataGroup.tags.map((tag, index) => (
                   <p key={index}>{tag}</p>
                 ))}
               </div>
-
             </div>
             
             <div className='info-section info-section2'>
@@ -50,7 +47,8 @@ function CardsPage() {
                   <i
                     key={index}
                     className={`fa-solid fa-star ${index < dataGroup.rating ? 'active-star' : 'disabled-star'}`}
-                  ></i>
+                  >
+                  </i>
                 ))}
               </div>
             </div>
@@ -61,19 +59,15 @@ function CardsPage() {
               title="Description"
               content={dataGroup.description}
             />
-            
             <Collapse
               title="Équipement"
               content={dataGroup.equipments.map((equipment, index) => (<span key={index}>{equipment}</span>))}
             />
           </div>
-
         </div>
       </div>
     );
   }
-
-
 }
 
 export default CardsPage;

@@ -1,5 +1,6 @@
 /****** GENERAL ******/
 .PrincipalPage {
+  font-family: "Montserrat", sans-serif;
   min-height: 67vh;
   width: 100vw;
   display: flex;
@@ -134,8 +135,8 @@
       justify-content: flex-start;
 
       h1{
-        font-size: 6vw;
-        width: 58%;
+        font-size: 5vw;
+        width: 55%;
         margin-left: 4%;
         line-height: 2.5vh;
       }

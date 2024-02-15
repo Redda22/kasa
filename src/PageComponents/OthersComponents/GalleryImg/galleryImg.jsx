@@ -6,7 +6,7 @@ function GalleryImg(props) {
     const id = props.id;
     const images = cards_data.find(dataGroup => dataGroup.id === id).pictures; // récupération des images au groupe de données correspondant à l'id.
 
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0); // Variable d'état
 
     function nextImage() {
         setCurrentImageIndex((currentImageIndex + 1) % images.length);
@@ -28,11 +28,17 @@ function GalleryImg(props) {
             ))}
 
 
-            <div className='left-right-div'>
-                <span className='left' onClick={prevImage}><i className="fa-solid fa-chevron-left"></i></span>
-                <span className='right' onClick={nextImage}><i className="fa-solid fa-chevron-right"></i></span>
-            </div>
-            <p>{currentImageIndex + 1}/{images.length}</p>
+            {/* Correction 1 : Affichage des spans et p sous condition. */}
+            {images.length > 1 ?
+                <>
+                    <div className='left-right-div'>
+                        <span className='left' onClick={prevImage}><i className="fa-solid fa-chevron-left"></i></span>
+                        <span className='right' onClick={nextImage}><i className="fa-solid fa-chevron-right"></i></span>
+                    </div>
+                    <p>{currentImageIndex + 1}/{images.length}</p>
+                </> : null
+        }
+
 
         </div>
     );

@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 import './PrincipalPage.scss';
-import cards_data from '../Assets/cards.json'; /**/
+import cards_data from '../PageComponents/cards.json'; /**/
 
 import titleImg from '../Assets/img/Image2.png';
 
@@ -15,10 +15,9 @@ function PrincipalPage() {
         <img src={titleImg} alt="PP" />
         <h1>Chez vous, partout et ailleurs</h1>
       </div>
-
+      
       <div className='cards'>
         {cards_data.map((dataGroup, index) => (
-          
           <Link
 
             key={index} // Attribution d'une clé aux Links.
